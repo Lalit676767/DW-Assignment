@@ -1,0 +1,29 @@
+
+version: 2
+
+sources:
+    - name: snowflake_cred1
+      description: 'Assignment purpose'
+      database: DANIEL
+      schema: ASSIGNMENT
+      tables:
+        - name: GSORDERS
+          description: 'Global Superstore Orders'
+        - name: GSPEOPLE
+          description: 'Global Superstore People'
+        - name: GSRETURNS
+          description: 'Global Superstore Returns'
+models:
+    - name: productTbl
+      description: "Product information"
+      tags: ["Product"]
+      columns: 
+        - name: PRODUCTID
+          description: "The ID used for Product"
+          tests:
+             - unique
+             - not_null 
+        - name: PRODUCTNAME
+        - name: CATEGORY
+        - name: SUBCATEGORY
+  
