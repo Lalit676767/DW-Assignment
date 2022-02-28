@@ -2,12 +2,15 @@
 {{
     config(
         materialized='table',
-        unique_key='PRODUCTID'
+        unique_key='postalcode'
     )
 }}
 SELECT distinct
-    PRODUCTID,
-    PRODUCTNAME,
-    CATEGORY,
-    SUBCATEGORY
+    postalcode,
+    city,
+    state,
+    country,
+    region,
+    market
+
 FROM  {{source('snowflake_cred1','GSORDERS')}}
