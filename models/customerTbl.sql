@@ -13,6 +13,7 @@ SELECT
     state,
     country,
     region,
+    postalcode,
     market
 
 FROM  {{source('snowflake_cred1','GSORDERS')}}
