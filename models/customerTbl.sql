@@ -5,7 +5,7 @@
         unique_key='customerid'
     )
 }}
-SELECT
+SELECT distinct
     customerid,
     customername,
     segmane
