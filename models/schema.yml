@@ -49,4 +49,21 @@ models:
         - name: POSTALCODE
           tests:
              - unique
+    - name: ordersTbl
+      description: "Order information"
+      tags: ["Order"]
+      columns: 
+        - name: ROWID
+          tests:
+             - unique
+        - name: ORDERID
+        - name: ORDERDATE
+        - name: SHIPDATE
+        - name: SHIPMODE
+        - name: SALES
+        - name: QUANTITY
+        - name: DICOUNT
+        - name: PROFIT
+        - name: ORDERPRIORITY
+          
   
