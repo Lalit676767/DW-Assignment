@@ -2,7 +2,7 @@
 {{
     config(
         materialized='table',
-        unique_key='customerID'
+        unique_key='customerid'
     )
 }}
 SELECT
