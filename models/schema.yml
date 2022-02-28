@@ -26,4 +26,19 @@ models:
         - name: PRODUCTNAME
         - name: CATEGORY
         - name: SUBCATEGORY
+    - name: customerTbl
+      description: "customer information"
+      tags: ["Customer"]
+      columns: 
+        - name: CUSTOMERID
+          description: "The ID used for CUstomer"
+          tests:
+             - unique
+             - not_null 
+        - name: CUSTOMERNAME
+        - name: STATE
+        - name: COUNTRY
+        - name: REGION
+        - name: CITY
+        - name: MARKET
   
