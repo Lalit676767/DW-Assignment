@@ -4,7 +4,7 @@
     )
 }}
 SELECT 
-sum(to_number(trim(f.sales,'$'),10,2)) total_sales
+sum(to_number(trim(f.sales*f.quantity,'$'),10,2)) total_sales
 ,month(o.shipdate) as months
 ,year(o.shipdate) as years
 FROM  {{ref('ordersTbl')}} o

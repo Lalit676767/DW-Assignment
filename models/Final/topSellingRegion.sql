@@ -5,7 +5,7 @@
 }}
 with cte as(
 SELECT 
-sum(to_number(trim(f.sales,'$'),10,2)) sum_sales
+sum(to_number(trim(f.sales*f.quantity,'$'),10,2)) sum_sales
 ,year(o.SHIPDATE) yr
 ,r.region
 FROM  {{ref('regionTbl')}} r
