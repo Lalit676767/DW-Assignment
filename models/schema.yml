@@ -51,7 +51,16 @@ models:
              - unique
         - name: MARKET
         - name: POSTALCODE
-          
+    - name: returnsTbl
+      description: "Returns information"
+      tags: ["Returns"]
+      columns: 
+        - name: Returned
+        - name: OrderID
+          tests:
+             - unique
+        - name: Region  
+      
     - name: ordersTbl
       description: "Order information"
       tags: ["Order"]
