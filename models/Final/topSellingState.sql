@@ -7,17 +7,17 @@ with cte as(
 SELECT 
 sum(to_number(trim(f.sales,'$'),10,2)) sum_sales
 ,year(o.SHIPDATE) yr
-,r.state
+,f.state
 FROM  {{ref('regionTbl')}} r
 join
 {{ref('fact1')}} f
-on r.city=f.city
-and r.state=f.state
+on r.city_key=f.city
+and r.state_key=f.state
 join
 {{ref('ordersTbl')}} o
-on f.rowid=o.rowid
+on f.rowid=o.rowid_key
 group by 
-  r.state
+  f.state
   ,yr
 order by sum_sales desc
  )

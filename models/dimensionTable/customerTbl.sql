@@ -6,7 +6,7 @@
     )
 }}
 SELECT distinct
-    customerid,
+    customerid as customerid_key ,
     customername,
     segmane
 
