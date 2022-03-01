@@ -2,7 +2,7 @@
 {{
     config(
         materialized='table',
-        unique_key='city'
+        unique_key=('city','state')
     )
 }}
 SELECT distinct

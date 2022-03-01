@@ -8,5 +8,9 @@ SELECT rowid,
     orderid,
     customerid,
     PRODUCTID,
-    city
+    city,
+    sales,
+    quantity,
+    dicount,
+    profit
 FROM  {{source('snowflake_cred1','GSORDERS')}}

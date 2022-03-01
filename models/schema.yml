@@ -42,6 +42,8 @@ models:
       tags: ["Region"]
       columns: 
         - name: STATE
+          tests:
+             - unique
         - name: COUNTRY
         - name: REGION
         - name: CITY
