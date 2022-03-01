@@ -1,0 +1,106 @@
+
+version: 2
+
+sources:
+    - name: snowflake_cred1
+      description: 'Assignment purpose'
+      database: DANIEL
+      schema: SOURCE
+      tables:
+        - name: GSORDERS
+          description: 'Global Superstore Orders'
+        - name: GSPEOPLE
+          description: 'Global Superstore People'
+        - name: GSRETURNS
+          description: 'Global Superstore Returns'
+models:
+    - name: productTbl
+      description: "Product information"
+      tags: ["Product"]
+      columns: 
+        - name: PRODUCTID
+          description: "The ID used for Product"
+          tests:
+             - unique
+             - not_null 
+        - name: PRODUCTNAME
+        - name: CATEGORY
+        - name: SUBCATEGORY
+    - name: customerTbl
+      description: "customer information"
+      tags: ["Customer"]
+      columns: 
+        - name: CUSTOMERID
+          description: "The ID used for CUstomer"
+          tests:
+             - unique
+             - not_null 
+        - name: CUSTOMERNAME
+        - name: SEGMANE
+    - name: regionTbl
+      description: "Region information"
+      tags: ["Region"]
+      columns: 
+        - name: STATE
+          tests:
+             - unique
+        - name: COUNTRY
+        - name: REGION
+        - name: CITY
+          tests:
+             - unique
+        - name: MARKET
+        - name: POSTALCODE
+    - name: returnsTbl
+      description: "Returns information"
+      tags: ["Returns"]
+      columns: 
+        - name: Returned
+        - name: OrderID
+          tests:
+             - unique
+        - name: Region
+    - name: peopleTbl
+      description: "People information"
+      tags: ["People"]
+      columns: 
+        - name: PERSON
+        - name: REGION
+          tests:
+             - unique
+        - name: Region 
+      
+    - name: ordersTbl
+      description: "Order information"
+      tags: ["Order"]
+      columns: 
+        - name: ROWID
+          tests:
+             - unique
+        - name: ORDERID
+        - name: ORDERDATE
+        - name: SHIPDATE
+        - name: SHIPMODE
+        - name: SALES
+        - name: QUANTITY
+        - name: DICOUNT
+        - name: PROFIT
+        - name: ORDERPRIORITY
+    - name: SalesOverTime
+      description: "Sales Over time KPI"
+      tags: ["salesovertime"]
+      columns: 
+        - name: total_sales
+        - name: months
+        - name: years
+    - name: SalesPerProductCategoryLastYear
+      description: "Sales PER PRODUCT CATEGORY LAST YEAR"
+      tags: ["salesovercategorylastyear"]
+      columns: 
+        - name: SALES
+        - name: CATEGORY
+        - name: last_year
+      
+
+          
+  

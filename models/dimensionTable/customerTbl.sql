@@ -5,15 +5,9 @@
         unique_key='customerid'
     )
 }}
-SELECT
+SELECT distinct
     customerid,
     customername,
-    segmane,
-    city,
-    state,
-    country,
-    region,
-    postalcode,
-    market
+    segmane
 
 FROM  {{source('snowflake_cred1','GSORDERS')}}

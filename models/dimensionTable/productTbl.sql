@@ -5,7 +5,7 @@
         unique_key='PRODUCTID'
     )
 }}
-SELECT
+SELECT distinct
     PRODUCTID,
     PRODUCTNAME,
     CATEGORY,
