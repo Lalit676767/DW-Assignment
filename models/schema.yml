@@ -75,6 +75,13 @@ models:
         - name: total_sales
         - name: months
         - name: years
+    - name: SalesPerProductCategoryLastYear
+      description: "Sales PER PRODUCT CATEGORY LAST YEAR"
+      tags: ["salesovercategorylastyear"]
+      columns: 
+        - name: SALES
+        - name: CATEGORY
+        - name: last_year
       
 
           
