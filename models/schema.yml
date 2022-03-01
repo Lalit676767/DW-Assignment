@@ -45,10 +45,11 @@ models:
         - name: COUNTRY
         - name: REGION
         - name: CITY
-        - name: MARKET
-        - name: POSTALCODE
           tests:
              - unique
+        - name: MARKET
+        - name: POSTALCODE
+          
     - name: ordersTbl
       description: "Order information"
       tags: ["Order"]

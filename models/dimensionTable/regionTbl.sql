@@ -2,7 +2,7 @@
 {{
     config(
         materialized='table',
-        unique_key='postalcode'
+        unique_key='city'
     )
 }}
 SELECT distinct
