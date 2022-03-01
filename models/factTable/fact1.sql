@@ -10,6 +10,7 @@ SELECT rowid,
     PRODUCTID,
     city,
     sales,
+    state,
     quantity,
     dicount,
     profit
