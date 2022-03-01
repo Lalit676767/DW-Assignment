@@ -65,5 +65,14 @@ models:
         - name: DICOUNT
         - name: PROFIT
         - name: ORDERPRIORITY
+    - name: SalesOverTime
+      description: "Sales Over time KPI"
+      tags: ["salesovertime"]
+      columns: 
+        - name: total_sales
+        - name: months
+        - name: years
+      
+
           
   
