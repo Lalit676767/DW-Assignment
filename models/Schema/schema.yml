@@ -100,6 +100,18 @@ models:
         - name: SALES
         - name: CATEGORY
         - name: last_year
+    - name: topSellingRegion
+      description: "Top Selling Region"
+      tags: ["topsellingregion"]
+      columns: 
+        - name: SUM_SALES
+        - name: REGION
+    - name: topSellingState
+      description: "Top Selling state"
+      tags: ["topsellingstate"]
+      columns: 
+        - name: SUM_SALES
+        - name: REGION
       
 
           
