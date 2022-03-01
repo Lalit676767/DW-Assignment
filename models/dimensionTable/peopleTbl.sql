@@ -5,7 +5,7 @@
     )
 }}
 SELECT distinct
-    PERSON,
-    REGION
+    PERSON ,
+    REGION as REGION_KEY
 
 FROM  {{source('snowflake_cred1','GSPEOPLE')}}

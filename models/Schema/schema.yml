@@ -18,7 +18,7 @@ models:
       description: "Product information"
       tags: ["Product"]
       columns: 
-        - name: PRODUCTID
+        - name: PRODUCTID_KEY
           description: "The ID used for Product"
           tests:
              - unique
@@ -30,7 +30,7 @@ models:
       description: "customer information"
       tags: ["Customer"]
       columns: 
-        - name: CUSTOMERID
+        - name: CUSTOMERID_KEY
           description: "The ID used for CUstomer"
           tests:
              - unique
@@ -41,10 +41,10 @@ models:
       description: "Region information"
       tags: ["Region"]
       columns: 
-        - name: STATE
+        - name: STATE_KEY
         - name: COUNTRY
         - name: REGION
-        - name: CITY
+        - name: CITY_KEY
         - name: MARKET
         - name: POSTALCODE
     - name: returnsTbl
@@ -52,7 +52,7 @@ models:
       tags: ["Returns"]
       columns: 
         - name: Returned
-        - name: OrderID
+        - name: OrderID_KEY
           tests:
              - unique
         - name: Region
@@ -61,7 +61,7 @@ models:
       tags: ["People"]
       columns: 
         - name: PERSON
-        - name: REGION
+        - name: REGION_KEY
           tests:
              - unique
       
@@ -69,7 +69,7 @@ models:
       description: "Order information"
       tags: ["Order"]
       columns: 
-        - name: ROWID
+        - name: ROWID_KEY
           tests:
              - unique
         - name: ORDERID

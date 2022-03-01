@@ -5,7 +5,7 @@
         unique_key='ROWID'
     )
 }}
-SELECT rowid,
+SELECT rowid as rowid_key,
     orderid,
     orderdate,
     shipdate,

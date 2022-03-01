@@ -10,8 +10,8 @@ sum(to_number(trim(f.sales,'$'),10,2)) SALES
 FROM  {{ref('productTbl')}} p
 join
 {{ref('fact1')}} f
-on p.PRODUCTID=f.PRODUCTID
+on p.PRODUCTID_KEY=f.PRODUCTID
 join
 {{ref('ordersTbl')}} o
-on f.rowid=o.rowid
+on f.rowid=o.rowid_key
 group by CATEGORY

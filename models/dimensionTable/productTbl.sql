@@ -6,7 +6,7 @@
     )
 }}
 SELECT distinct
-    PRODUCTID,
+    PRODUCTID as PRODUCTID_key,
     PRODUCTNAME,
     CATEGORY,
     SUBCATEGORY

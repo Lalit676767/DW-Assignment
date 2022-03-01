@@ -10,6 +10,6 @@ sum(to_number(trim(f.sales,'$'),10,2)) total_sales
 FROM  {{ref('ordersTbl')}} o
 join
 {{ref('fact1')}} f
-on o.rowid=f.rowid
+on o.rowid_key=f.rowid
 group by months,years
 order by months,years

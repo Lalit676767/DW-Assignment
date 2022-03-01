@@ -7,8 +7,8 @@
 }}
 SELECT distinct
     postalcode,
-    city,
-    state,
+    city as city_key,
+    state as state_key,
     country,
     region,
     market

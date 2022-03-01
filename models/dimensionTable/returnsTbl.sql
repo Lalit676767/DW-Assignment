@@ -6,7 +6,7 @@
 }}
 SELECT distinct
     Returned,
-    OrderID,
+    OrderID as orderid_key,
     Region
 
 FROM  {{source('snowflake_cred1','GSRETURNS')}}
