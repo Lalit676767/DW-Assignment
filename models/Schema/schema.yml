@@ -59,7 +59,16 @@ models:
         - name: OrderID
           tests:
              - unique
-        - name: Region  
+        - name: Region
+    - name: peopleTbl
+      description: "People information"
+      tags: ["People"]
+      columns: 
+        - name: PERSON
+        - name: REGION
+          tests:
+             - unique
+        - name: Region 
       
     - name: ordersTbl
       description: "Order information"

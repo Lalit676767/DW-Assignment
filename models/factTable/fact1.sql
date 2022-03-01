@@ -5,15 +5,15 @@
     )
 }}
 SELECT rowid,
-    orderid,
     customerid,
     PRODUCTID,
     city,
-    sales,
-    sales*quantity as revenue,
     state,
+    sales,
+    to_number(trim(sales,'$'),10,2)*quantity as revenue,
     quantity,
     dicount,
     profit,
-    profit/revenue as profit_margin
+    case when substring(profit,1,1)='-' then round(-to_number(trim(trim(profit,'-'),'$'),10,2)/revenue*100,2) 
+    else round(to_number(trim(profit,'$'),10,2)/revenue*100,2) end as profit_margin
 FROM  {{source('snowflake_cred1','GSORDERS')}}
