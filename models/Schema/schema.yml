@@ -64,6 +64,9 @@ models:
         - name: REGION_KEY
           tests:
              - unique
+            #  - relationships:
+            #   to: ref('customers')
+            #   field: id
       
     - name: ordersTbl
       description: "Order information"
