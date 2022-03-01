@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 # DW-Assignment
 
 Sources : GSOrders.xlsx, GSReturns.csv
@@ -15,7 +14,7 @@ Fact Table: fact1
 Data Ingestion: Csv through Seeding, Xlsx through loading in Snowflake .
 
 Scheduling: DBT Cloud (Every Hour)
-=======
+
 Metrics : 
 
 Sales Over Time​
