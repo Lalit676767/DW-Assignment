@@ -42,13 +42,9 @@ models:
       tags: ["Region"]
       columns: 
         - name: STATE
-          tests:
-             - unique
         - name: COUNTRY
         - name: REGION
         - name: CITY
-          tests:
-             - unique
         - name: MARKET
         - name: POSTALCODE
     - name: returnsTbl
@@ -68,7 +64,6 @@ models:
         - name: REGION
           tests:
              - unique
-        - name: Region 
       
     - name: ordersTbl
       description: "Order information"
