@@ -5,7 +5,7 @@ sources:
     - name: snowflake_cred1
       description: 'Assignment purpose'
       database: DANIEL
-      schema: ASSIGNMENT
+      schema: SOURCE
       tables:
         - name: GSORDERS
           description: 'Global Superstore Orders'
