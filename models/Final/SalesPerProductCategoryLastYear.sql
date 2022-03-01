@@ -4,7 +4,7 @@
     )
 }}
 SELECT 
-sum(to_number(trim(f.sales*f.quantity,'$'),10,2)) SALES
+sum(to_number(trim(f.sales,'$'),10,2)) SALES
 ,max(year(o.SHIPDATE))-1 last_year
 ,p.CATEGORY CATEGORY
 FROM  {{ref('productTbl')}} p

@@ -10,8 +10,10 @@ SELECT rowid,
     PRODUCTID,
     city,
     sales,
+    sales*quantity as revenue,
     state,
     quantity,
     dicount,
-    profit
+    profit,
+    profit/revenue as profit_margin
 FROM  {{source('snowflake_cred1','GSORDERS')}}
